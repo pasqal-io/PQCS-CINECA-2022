@@ -1,0 +1,113 @@
+{
+  "version": "1",
+  "name": "pulser-exported",
+  "register": [
+    {
+      "name": "q0",
+      "x": -14,
+      "y": -14
+    },
+    {
+      "name": "q1",
+      "x": -7,
+      "y": -14
+    },
+    {
+      "name": "q2",
+      "x": 0,
+      "y": -14
+    },
+    {
+      "name": "q3",
+      "x": 7,
+      "y": -14
+    },
+    {
+      "name": "q4",
+      "x": 14,
+      "y": -14
+    },
+    {
+      "name": "q5",
+      "x": -14,
+      "y": -7
+    },
+    {
+      "name": "q6",
+      "x": -7,
+      "y": -7
+    },
+    {
+      "name": "q7",
+      "x": 0,
+      "y": -7
+    },
+    {
+      "name": "q8",
+      "x": 7,
+      "y": -7
+    }
+  ],
+  "channels": {
+    "ising": "rydberg_global"
+  },
+  "variables": {},
+  "operations": [
+    {
+      "op": "pulse",
+      "channel": "ising",
+      "protocol": "min-delay",
+      "amplitude": {
+        "kind": "ramp",
+        "duration": 2500,
+        "start": 0,
+        "stop": 12.566370614359172
+      },
+      "detuning": {
+        "kind": "constant",
+        "duration": 2500,
+        "value": -25.132741228718345
+      },
+      "phase": 0,
+      "post_phase_shift": 0
+    },
+    {
+      "op": "pulse",
+      "channel": "ising",
+      "protocol": "min-delay",
+      "amplitude": {
+        "kind": "constant",
+        "duration": 5000,
+        "value": 12.566370614359172
+      },
+      "detuning": {
+        "kind": "ramp",
+        "duration": 5000,
+        "start": -25.132741228718345,
+        "stop": 25.132741228718345
+      },
+      "phase": 0,
+      "post_phase_shift": 0
+    },
+    {
+      "op": "pulse",
+      "channel": "ising",
+      "protocol": "min-delay",
+      "amplitude": {
+        "kind": "ramp",
+        "duration": 2500,
+        "start": 12.566370614359172,
+        "stop": 0
+      },
+      "detuning": {
+        "kind": "constant",
+        "duration": 2500,
+        "value": 25.132741228718345
+      },
+      "phase": 0,
+      "post_phase_shift": 0
+    }
+  ],
+  "measurement": null,
+  "device": "MockDevice"
+}
