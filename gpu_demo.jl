@@ -1,10 +1,3 @@
-```
-To run this script:
-- install julia 1.8
-- check out https://github.com/ITensor/ITensors.jl.git at commit 6f6831e20ef5badc5ac82350e7524c968c876b4f
-- julia -e 'using Pkg; Pkg.develop(path="<ITENSOR_ROOT>")'
-- julia -e 'using Pkg; Pkg.develop(path="<ITENSOR_ROOT>/ITensorGPU")'
-```
 using ITensors
 using CUDA
 using CUDA.CUTENSOR
